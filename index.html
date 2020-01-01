@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trip Planner</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome JS-->
+    <script src="https://kit.fontawesome.com/a2e2f81646.js" crossorigin="anonymous"></script>
+    <!-- My Custom CSS -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  </head>
+
+  <body>
+
+
+    <!--MODAL SIGN IN-->
+    <div class="modal fade" id="signInModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--Body-->
+        <div class="modal-body mx-4">
+          <!--Body-->
+          <div class="md-form mb-5">
+            <input type="email" id="Form-email1" class="form-control validate">
+            <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
+          </div>
+  
+          <div class="md-form pb-3">
+            <input type="password" id="Form-pass1" class="form-control validate">
+            <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
+            <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
+                Password?</a></p>
+          </div>
+  
+          <div class="text-center mb-3">
+            <button type="button" class="btn btn-info">SIGN IN</button>
+          </div>
+          <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+            with:</p>
+  
+          <div class="row my-3 d-flex justify-content-center">
+            <!--Facebook-->
+            <button type="button" class="btn btn-outline-info mr-md-3 "><i class="fab fa-facebook-f text-center"></i></button>
+            <!--Twitter-->
+            <button type="button" class="btn btn-outline-info mr-md-3 "><i class="fab fa-twitter"></i></button>
+            <!--Google +-->
+            <button type="button" class="btn btn-outline-info mr-md-3 "><i class="fab fa-google-plus-g"></i></button>
+          </div>
+        </div>
+        <!--Footer-->
+        <div class="modal-footer mx-5 pt-3 mb-1">
+          <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="text-info ml-1">
+              Sign Up</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+    <div class="wrapper">
+
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+          <div id="dismiss">
+              <i class="fas fa-arrow-left"></i>
+          </div>
+
+          <div class="sidebar-header">
+              <a href="index.html">
+                <img src="img/logo01.png" class="logo">
+              </a>
+          </div>
+
+          <ul class="list-unstyled components">
+        
+       
+              <li>
+                  <a href="#SignIn" data-toggle="modal" data-target="#signInModalForm">Sign In</a>
+              </li>
+              <li>
+                  <a href="destinations.html">All Destinations</a>
+              </li>
+              
+              
+          </ul>
+
+          <ul class="list-unstyled CTAs">
+            <li>
+              <a href="#">Terms & Conditions</a>
+          </li>
+          <li>
+              <a href="#">Privacy Statement</a>
+          </li>
+          </ul>
+          
+      </nav>
+
+      <!-- Page Content  -->
+      <div class="container-fluid main-container p-0">
+          
+          <!-- jumbotron -->
+          <div class="jumbotron jumbotron-fluid">
+              <button class="navbar-toggler" type="button" id="sidebarCollapse" >
+                  <i class="fas fa-bars fa-2x"></i>
+              </button>
+            <div class="container-fluid">
+              <form >
+                <div class="form-row align-items-center justify-content-center">
+                  <div class="col-xs-6 col-sm-3 my-1">
+                    <input type="text" class="form-control" id="inputCity" placeholder="Choose a city">
+                  </div>
+                  <div class="col-xs-6 col-sm-3 my-1">
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                      <option selected>How many days?</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row text-center align-items-center ">
+                  <div class="form-check mb-2 col-12 form-interests-box small">
+                      
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Must see
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Museums
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Gastronomy
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Nature
+                    </label>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse_options" aria-expanded="false" aria-controls="collapse_options">
+                        <i class="fas fa-chevron-down fa-lg"></i>
+                    </button>
+                    <div class="collapse" id="collapse_options">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Kids
+                      </label>
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Shopping
+                      </label>
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Night Live
+                      </label>
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Sports
+                      </label>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="form-row text-center"> 
+                  <div class="form-check col-12">
+                      <a href="itinerary.html" role="button" class="btn btn-warning mb-2">Let's go!</a>
+                  </div>
+                </div>  
+              </form>
+            </div>
+          </div>
+
+          <!-- Highlighted Destinations -->
+          <div class="container-fluid wrapper-cities">
+            <div class="row">
+           
+              <div class="col-12 col-sm-6 col-md-4 shadow-sm ">
+                  <a href="barcelona.html" class="city-link">
+                      <div class="city-box city-box-barcelona">
+                        <div class="city-box-title" >
+                          <h4>Barcelona</h4>
+                        </div>
+                      </div>
+                      </a>
+                
+              </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-singapore">
+                      <div class="city-box-title" >
+                          <h4>Singapore</h4>
+                        </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 ">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-panama">
+                    <div class="city-box-title" >
+                      <h4>Panama City</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 ">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-london">
+                    <div class="city-box-title" >
+                      <h4>London</h4>
+                    </div>
+                    </div>
+                  </a>
+              </div>
+              <div class="col-12 col-sm-6  col-md-4 ">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-istanbul">
+                    <div class="city-box-title" >
+                      <h4>Istanbul</h4>
+                    </div>
+                    </div>
+                  </a>
+              </div>
+              <div class="col-12 col-sm-6  col-md-4 ">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-toronto">
+                    <div class="city-box-title" >
+                      <h4>Toronto</h4>
+                    </div>
+                    </div>
+                  </a>
+              </div>
+              <div class="col-12 col-sm-6  col-md-4 ">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-cairo">
+                    <div class="city-box-title" >
+                      <h4>Cairo</h4>
+                    </div>
+                    </div>
+                  </a>
+              </div>
+              <div class="col-12 col-sm-6  col-md-4 ">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-sidney">
+                    <div class="city-box-title" >
+                      <h4>Sidney</h4>
+                    </div>
+                    </div>
+                  </a>
+              </div>
+              <div class="col-12 col-sm-6  col-md-4 ">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-paris">
+                    <div class="city-box-title" >
+                      <h4>Paris</h4>
+                    </div>
+                    </div>
+                  </a>
+              </div>
+              <div class="col-12 col-sm-6  col-md-4 ">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-rio">
+                    <div class="city-box-title" >
+                      <h4>Rio de Janeiro</h4>
+                    </div>
+                    </div>
+                  </a>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 ">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-kioto">
+                      <div class="city-box-title" >
+                          <h4>Kioto</h4>
+                        </div>
+                    </div>
+                  </a>
+              </div>
+              <div class="col-12 col-sm-6  col-md-4 ">
+                  <a href="#" class="city-link">
+                  <div class="city-box city-box-sanfrancisco">
+                      <div class="city-box-title" >
+                          <h4>San Francisco</h4>
+                        </div>
+                    </div>
+                  </a>
+              </div>
+              <div class="col-12 text-center">
+                <a href="destinations.html"> 
+                  <i class="fas fa-globe-africa fa-3x destinations-icon-home"></i>
+                  <p>More destinations</p>
+                </a>
+                </div>
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+
+
+
+      <div class="overlay"></div>
+
+      <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Popper js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap js  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- jQuery Scroller Sidebar  CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Barcelona Itinerary</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome JS-->
+    <script src="https://kit.fontawesome.com/a2e2f81646.js" crossorigin="anonymous"></script>
+    <!-- My Custom CSS -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <a href="index.html">
+                    <img src="img/logo01.png" class="logo">
+                </a>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li >
+                    <a href="profile.html">My Profile</a>
+                </li>
+                <li >
+                    <a href="my_itineraries.html">My Itineraries</a>
+                </li>
+                <li>
+                    <a href="destinations.html">All Destinations</a>
+                </li>
+                
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li >
+                    <a href="#">Terms & Contidions</a>
+                </li>
+                <li >
+                    <a href="#">Privacy Statement</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div class="container-fluid p-0">
+            <div class="itin-header">
+                <div class="d-flex justify-content-between">
+                    <button class="navbar-toggler border-0" type="button" id="sidebarCollapse" >
+                            <i class="fas fa-bars fa-2x"></i>
+                    </button>
+                    <div class="ml-auto mt-2 mr-2 itin-header-icons">
+                        <a href="#" title="Share" class="mr-3"><i class="fas fa-share-alt fa-lg"></i></a>
+                        <a href="#" title="Offline Access" class="mr-3"><i class="fas fa-save fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+    
+                    <a href="barcelona.html"><h1 class="font-weight-bold">Barcelona</h1></a>
+                    
+                </div>
+            </div>
+
+
+
+            <div class="itin-header">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item ml-2">
+                        <a class="nav-link active border border-bottom-0" href="#day1" role="tab" id="day1-tab" data-toggle="tab" aria-controls="day1">Day 1</a>
+                    </li>
+                    <li class="nav-item ml-2 ">
+                        <a class="nav-link border border-bottom-0" href="#day2" role="tab" id="day2-tab" data-toggle="tab" aria-controls="day2">Day 2</a>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <a class="nav-link border border-bottom-0" href="#day3" role="tab" id="day3-tab" data-toggle="tab" aria-controls="day3">Day 3</a>
+                    </li>  
+                    <li class="nav-item ml-2">
+                        <a class="nav-link border border-bottom-0" href="#addDay" title="Add Day" role="tab" id="addDay-tab" data-toggle="tab" aria-controls="addDay">+</a>
+                    </li> 
+                    <li class=" ml-2 ml-auto ">
+                </ul>
+                
+                        
+                <!-- Content Panel -->
+                <div id="itin-nav-content" class="tab-content">
+                
+                    <div role="tabpanel" class="tab-pane fade show active" id="day1" aria-labelledby="day1-tab">
+                        
+                        <div class="container">
+                                <h2>Day 1</h2>
+                            <div class="row mt-4">
+                                    
+                                <div class="col-12 col-md-6 mb-4">
+                                    
+                                    
+                                    <ul class="list-group" id="draggableList">
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-sagradafamilia"></div></a> 
+                                                </div>
+                                                    
+                                                <a href="#" class="my-auto"><h6 >Sagrada Familia</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-casabatllo"></div></a> 
+                                                </div>
+                                                    
+                                                <a href="#" class="my-auto"><h6 >Casa Batlló</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="park_guell.html" ><div class="place-img img-parkguell"></div></a>  
+                                                </div>
+                                                <a href="park_guell.html" class="my-auto"><h6 >Park Güell</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-arctriomf"></div></a>  
+                                                </div>
+                                                <a href="#" class="my-auto"><h6 >Arc de Triomf</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>   
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=1oxVaOqy1UOtfgLoqrgQjR3urpNM&hl=en" width="100%" height="480"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane fade" id="day2" aria-labelledby="day2-tab">
+                        <div class="container">
+                                <h2>Day 2</h2>
+                            <div class="row mt-4">
+                                    
+                                <div class="col-12 col-md-6 mb-4">
+                                    
+                                    
+                                    <ul class="list-group" id="draggableList2">
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-sagradafamilia"></div></a> 
+                                                </div>
+                                                    
+                                                <a href="#" class="my-auto"><h6 >Sagrada Familia</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-casabatllo"></div></a> 
+                                                </div>
+                                                    
+                                                <a href="#" class="my-auto"><h6 >Casa Batlló</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-parkguell"></div></a>  
+                                                </div>
+                                                <a href="#" class="my-auto"><h6 >Park Güell</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-arctriomf"></div></a>  
+                                                </div>
+                                                <a href="#" class="my-auto"><h6 >Arc de Triomf</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>   
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=1oxVaOqy1UOtfgLoqrgQjR3urpNM&hl=en" width="100%" height="480"></iframe>
+                                </div>
+                            </div>
+                        </div>      
+                    </div>
+        
+                    <div role="tabpanel" class="tab-pane fade" id="day3" aria-labelledby="day3-tab">
+                        <div class="container">
+                                <h2>Day 3</h2>
+                            <div class="row mt-4">
+                                    
+                                <div class="col-12 col-md-6 mb-4">
+                                    
+                                    
+                                    <ul class="list-group" id="draggableList2">
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-sagradafamilia"></div></a> 
+                                                </div>
+                                                    
+                                                <a href="#" class="my-auto"><h6 >Sagrada Familia</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-casabatllo"></div></a> 
+                                                </div>
+                                                    
+                                                <a href="#" class="my-auto"><h6 >Casa Batlló</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-parkguell"></div></a>  
+                                                </div>
+                                                <a href="#" class="my-auto"><h6 >Park Güell</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="fas fa-ellipsis-v fa-2x handle my-auto pr-2"></i>
+                                                    <a href="#" ><div class="place-img img-arctriomf"></div></a>  
+                                                </div>
+                                                <a href="#" class="my-auto"><h6 >Arc de Triomf</h6></a>
+                                                <div class="my-auto">
+                                                    <a href="#" title="Change Day"><i class="fas fa-exchange-alt fa-lg mt-n2"></i></a></br>   
+                                                    <a href="#" title="Remove"><i class="fas fa-trash fa-lg mt-2"></i></a> 
+                                                </div>   
+                                            </div>
+                                        </li>   
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=1oxVaOqy1UOtfgLoqrgQjR3urpNM&hl=en" width="100%" height="480"></iframe>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="addDay" aria-labelledby="addDay-tab">
+                        <div class="container text-center">
+                                <h2>Add places to visit in Barcelona!</h2>
+                                <a href="barcelona.html" title="Add" class="text-warning">   <i class="fas fa-plus-circle fa-3x mt-5 mb-5"></i></a>
+                        </div>  
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+        <div class="overlay"></div>
+
+        <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Popper js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap js  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Sortable content via: https://jsfiddle.net/djibe89/d2fvqpke/   -->
+    <script src="https://cdn.jsdelivr.net/gh/RubaXa/Sortable/Sortable.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+        Sortable.create(draggableList, {
+        animation: 100,
+        group: 'list-1',
+        draggable: '.list-group-item',
+        handle: '.handle',
+        sort: true,
+        filter: '.sortable-disabled',
+        });
+
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+
+
+
+    </body>
+</html>

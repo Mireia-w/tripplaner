@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Destinations - Trip Planner</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome JS-->
+    <script src="https://kit.fontawesome.com/a2e2f81646.js" crossorigin="anonymous"></script>
+    <!-- My Custom CSS -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+          <div id="dismiss">
+              <i class="fas fa-arrow-left"></i>
+          </div>
+
+          <div class="sidebar-header">
+                <a href="index.html">
+                    <img src="img/logo01.png" class="logo">
+                </a>
+          </div>
+
+          <ul class="list-unstyled components">
+              <li >
+                <a href="profile.html">My Profile</a>
+            </li>
+            <li >
+                <a href="my_itineraries.html">My Itineraries</a>
+            </li>
+              <li class="active" >
+                  <a href="#">All Destinations</a>
+              </li>
+              
+          </ul>
+
+          <ul class="list-unstyled CTAs">
+            <li >
+                <a href="#">Terms & Contidions</a>
+            </li>
+            <li >
+                <a href="#">Privacy Statement</a>
+            </li>
+          </ul>
+      </nav>
+
+      <!-- Page Content  -->
+      <div class="container-fluid p-0 main-container">
+            <button class="navbar-toggler border-0" type="button" id="sidebarCollapse" >
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
+
+            <div class="container-fluid">  
+                <div class="form-row align-items-center justify-content-center">
+                    <div class="col-xs-6 col-sm-3 my-1  search-destination">
+                        <h2>Find your destination</h2>
+                        <input type="text" class="form-control" id="inputCity" placeholder="Search a city">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="container-fluid wrapper-destinations bg-light">
+                <div class="row" id="destinations-list">
+
+                    <ul class="list-unstyled components">   
+                        <li>
+                            <a href="#europeSubmenu"  data-toggle="collapse" data-target="#collapse_europe" aria-expanded="false" aria-controls="collapse_europe">
+                                <div class="row destination-box destination-box-europe">
+                                    <div class="col-5 col-md-3" >
+                                        <h4>Europe</h4>
+                                    </div>
+                                </div>
+                                
+                            </a>
+                            <ul class="collapse list-unstyled" id="collapse_europe" >
+                                <li><a href="#">Albania</a></li>
+                                <li><a href="#">Andorra</a></li>
+                                <li><a href="#">Austria</a></li>
+                                <li><a href="#">Belarus</a></li>
+                                <li><a href="#">Belgium</a></li>
+                                <li><a href="#">Bosnia and Herzegovina</a></li>
+                                <li><a href="#">Bulgaria</a></li>
+                                <li><a href="#">Croatia</a></li>
+                                <li><a href="#">Cyprus</a></li>
+                                <li><a href="#">Czech Republic</a></li>
+                                <li><a href="#">Denmark</a></li>
+                                <li><a href="#">Estonia</a></li>
+                                <li><a href="#">Finland</a></li> 
+                                <li><a href="#">France</a></li>
+                    
+                                <li><a href="#">Germany</a></li>
+                                <li><a href="#">Greece</a></li>
+                                <li><a href="#">Greenland</a></li>
+                                <li><a href="#">Hungary</a></li>
+                                <li><a href="#">Iceland</a></li>  
+                                <li><a href="#">Italy</a></li>
+                                <li><a href="#">Ireland</a></li>
+                                <li><a href="#">Latvia</a></li>
+                             
+                                <li><a href="#">Lithuania</a></li>
+                                <li><a href="#">Luxembourg</a></li>
+                                <li><a href="#">Macedonia</a></li>
+                                <li><a href="#">Malta</a></li>
+                        
+                         
+                                <li><a href="#">Montenegro</a></li>
+                                <li><a href="#">Netherlands</a></li>
+                                <li><a href="#">Norway</a></li>
+                                <li><a href="#">Poland</a></li>
+                                <li><a href="#">Portugal</a></li>
+                                <li><a href="#">Romania</a></li>
+                                <li><a href="#">San Marino</a></li>
+                                <li><a href="#">Serbia</a></li>
+                                <li><a href="#">Slovakia</a></li>
+                                <li><a href="#">Slovenia</a></li>
+                                <li><a href="spain.html">Spain</a></li>
+                                <li><a href="#">Sweden</a></li>
+                                <li><a href="#">Switzerland</a></li>
+                                <li><a href="#">Turkey</a></li>
+                       
+                                <li><a href="#">United Kingdom</a></li>
+      
+                            </ul> 
+                        </li>
+                        
+
+                        <li>
+                            <a href="#asiaSubmenu"  data-toggle="collapse" data-target="#collapse_asia" aria-expanded="false" aria-controls="collapse_asia">
+                                <div class="row destination-box destination-box-asia">
+                                    <div class="col-5 col-md-3" >
+                                        <h4>Asia</h4>
+                                    </div> 
+                                </div> 
+                            </a>    
+                            <ul class="collapse list-unstyled" id="collapse_asia" >
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="#nAmeriaSubmenu"  data-toggle="collapse" data-target="#collapse_nAmerica" aria-expanded="false" aria-controls="collapse_nAmerica">
+                                <div class="row destination-box destination-box-nAmerica">
+                                    <div class="col-5 col-md-3" >
+                                        <h4>North America</h4>
+                                    </div> 
+                                </div> 
+                            </a>    
+                            <ul class="collapse list-unstyled" id="collapse_nAmerica" >
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#cAmeriaSubmenu"  data-toggle="collapse" data-target="#collapse_cAmerica" aria-expanded="false" aria-controls="collapse_cAmerica">
+                                <div class="row destination-box destination-box-cAmerica">
+                                    <div class="col-5 col-md-3" >
+                                        <h4>Central America</h4>
+                                    </div>
+                                </div> 
+                            </a>    
+                            <ul class="collapse list-unstyled" id="collapse_cAmerica" >
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#sAmeriaSubmenu"  data-toggle="collapse" data-target="#collapse_sAmerica" aria-expanded="false" aria-controls="collapse_sAmerica">
+                                <div class="row destination-box destination-box-sAmerica">
+                                    <div class="col-5 col-md-3" >
+                                        <h4>South America</h4>
+                                    </div>
+                                </div> 
+                            </a>    
+                            <ul class="collapse list-unstyled" id="collapse_sAmerica" >
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="#africaSubmenu"  data-toggle="collapse" data-target="#collapse_africa" aria-expanded="false" aria-controls="collapse_africa">
+                                <div class="row destination-box destination-box-africa">
+                                    <div class="col-5 col-md-3" >
+                                        <h4>Africa</h4>
+                                    </div>
+                                </div> 
+                            </a>    
+                            <ul class="collapse list-unstyled" id="collapse_africa" >
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#australiaSubmenu"  data-toggle="collapse" data-target="#collapse_australia" aria-expanded="false" aria-controls="collapse_australia">
+                                <div class="row destination-box destination-box-australia">
+                                    <div class="col-5 col-md-3" >
+                                        <h4>Australia & Pacific</h4>
+                                    </div>
+                                </div> 
+                            </a>    
+                            <ul class="collapse list-unstyled" id="collapse_australia" >
+                                <li><a href="#">Albania</a></li>
+                                <li><a href="#">Andorra</a></li>
+                                <li><a href="#">Austria</a></li>
+                                <li><a href="#">Belarus</a></li>
+                                <li><a href="#">Belgium</a></li>
+                                <li><a href="#">Bosnia and Herzegovina</a></li>
+                                <li><a href="#">Bulgaria</a></li>
+                                <li><a href="#">Croatia</a></li>
+                                <li><a href="#">Cyprus</a></li>
+                                <li><a href="#">Czech Republic</a></li>
+                                <li><a href="#">Denmark</a></li>
+                                <li><a href="#">Estonia</a></li>
+                                <li><a href="#">Finland</a></li> 
+                                <li><a href="#">France</a></li>
+                                <li><a href="#">Gibraltar</a></li>
+                                <li><a href="#">Germany</a></li>
+                                <li><a href="#">Greece</a></li>
+                                <li><a href="#">Greenland</a></li>
+                                <li><a href="#">Hungary</a></li>
+                                <li><a href="#">Iceland</a></li>  
+                                <li><a href="#">Italy</a></li>
+                                <li><a href="#">Ireland</a></li>
+                                <li><a href="#">Latvia</a></li>
+                                <li><a href="#">Liechtenstein</a></li>
+                                <li><a href="#">Lithuania</a></li>
+                                <li><a href="#">Luxembourg</a></li>
+                                <li><a href="#">Macedonia</a></li>
+                                <li><a href="#">Malta</a></li>
+                                <li><a href="#">Moldova</a></li>
+                                <li><a href="#">Monaco</a></li>
+                                <li><a href="#">Montenegro</a></li>
+                                <li><a href="#">Netherlands</a></li>
+                                <li><a href="#">Norway</a></li>
+                                <li><a href="#">Poland</a></li>
+                                <li><a href="#">Portugal</a></li>
+                                <li><a href="#">Romania</a></li>
+                                <li><a href="#">San Marino</a></li>
+                                <li><a href="#">Serbia</a></li>
+                                <li><a href="#">Slovakia</a></li>
+                                <li><a href="#">Slovenia</a></li>
+                                <li><a href="#">Spain</a></li>
+                                <li><a href="#">Sweden</a></li>
+                                <li><a href="#">Switzerland</a></li>
+                                <li><a href="#">Turkey</a></li>
+                                <li><a href="#">Ukraine</a></li>
+                                <li><a href="#">United Kingdom</a></li>
+                                <li><a href="#">Vatican City</a></li>
+                            </ul>
+                        </li>
+
+                    </ul> 
+                  
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+      <div class="overlay"></div>
+
+      <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Popper js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap js  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+  </body>
+</html>
